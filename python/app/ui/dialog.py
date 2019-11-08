@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'dialog.ui'
+#
+#      by: pyside-uic 0.2.15 running on PySide 1.2.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from tank.platform.qt import QtCore, QtGui
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(1200, 500)
+        Dialog.setMinimumSize(QtCore.QSize(1200, 500))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout(Dialog)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.verticalLayout_1 = QtGui.QVBoxLayout()
+        self.verticalLayout_1.setSizeConstraint(QtGui.QLayout.SetMaximumSize)
+        self.verticalLayout_1.setObjectName("verticalLayout_1")
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtGui.QLayout.SetMaximumSize)
+        self.horizontalLayout.setContentsMargins(-1, 0, -1, -1)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.logo_example = QtGui.QLabel(Dialog)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.logo_example.sizePolicy().hasHeightForWidth())
+        self.logo_example.setSizePolicy(sizePolicy)
+        self.logo_example.setMaximumSize(QtCore.QSize(256, 16777215))
+        self.logo_example.setText("")
+        self.logo_example.setPixmap(QtGui.QPixmap(":/res/sg_logo.png"))
+        self.logo_example.setAlignment(QtCore.Qt.AlignCenter)
+        self.logo_example.setObjectName("logo_example")
+        self.horizontalLayout.addWidget(self.logo_example)
+        self.verticalLayout_1.addLayout(self.horizontalLayout)
+        self.button_file_open = QtGui.QPushButton(Dialog)
+        self.button_file_open.setMinimumSize(QtCore.QSize(96, 0))
+        self.button_file_open.setMaximumSize(QtCore.QSize(96, 16777215))
+        self.button_file_open.setObjectName("button_file_open")
+        self.verticalLayout_1.addWidget(self.button_file_open)
+        self.button_shotgun_import = QtGui.QPushButton(Dialog)
+        self.button_shotgun_import.setMinimumSize(QtCore.QSize(96, 0))
+        self.button_shotgun_import.setMaximumSize(QtCore.QSize(96, 16777215))
+        self.button_shotgun_import.setObjectName("button_shotgun_import")
+        self.verticalLayout_1.addWidget(self.button_shotgun_import)
+        spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.verticalLayout_1.addItem(spacerItem)
+        self.horizontalLayout_2.addLayout(self.verticalLayout_1)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setSizeConstraint(QtGui.QLayout.SetNoConstraint)
+        self.verticalLayout_2.setContentsMargins(0, 0, -1, -1)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.progress_bar = QtGui.QProgressBar(Dialog)
+        self.progress_bar.setProperty("value", 24)
+        self.progress_bar.setObjectName("progress_bar")
+        self.verticalLayout_2.addWidget(self.progress_bar)
+        self.table = QtGui.QTableWidget(Dialog)
+        self.table.setMinimumSize(QtCore.QSize(1200, 400))
+        self.table.setObjectName("table")
+        self.table.setColumnCount(0)
+        self.table.setRowCount(0)
+        self.verticalLayout_2.addWidget(self.table)
+        self.label_status = QtGui.QLabel(Dialog)
+        self.label_status.setMinimumSize(QtCore.QSize(50, 20))
+        self.label_status.setText("")
+        self.label_status.setObjectName("label_status")
+        self.verticalLayout_2.addWidget(self.label_status)
+        self.horizontalLayout_2.addLayout(self.verticalLayout_2)
+        self.context = QtGui.QLabel(Dialog)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.context.sizePolicy().hasHeightForWidth())
+        self.context.setSizePolicy(sizePolicy)
+        self.context.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.context.setObjectName("context")
+        self.horizontalLayout_2.addWidget(self.context)
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "The Current Sgtk Environment", None, QtGui.QApplication.UnicodeUTF8))
+        self.button_file_open.setText(QtGui.QApplication.translate("Dialog", "Select EDL File", None, QtGui.QApplication.UnicodeUTF8))
+        self.button_shotgun_import.setText(QtGui.QApplication.translate("Dialog", "Shotgun Import", None, QtGui.QApplication.UnicodeUTF8))
+        self.context.setText(QtGui.QApplication.translate("Dialog", "Your Current Context: ", None, QtGui.QApplication.UnicodeUTF8))
+
+import resources_rc
